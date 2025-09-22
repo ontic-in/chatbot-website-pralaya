@@ -198,21 +198,9 @@
             <h2>Ask Our AI Assistant</h2>
             <p>Get instant answers about admissions, programs, schedules, and more!</p>
             
-            <!-- Chatbot Container - Replace this div with your embedded chatbot code -->
+            <!-- Salesforce Embedded Messaging Chatbot -->
             <div class="chatbot-container" id="chatbot-container">
-                <div class="chatbot-placeholder">
-                    <h3>🤖 Your Chatbot Will Appear Here</h3>
-                    <p>Replace this placeholder with your embedded chatbot code</p>
-                </div>
-            </div>
-
-            <!-- Instructions for embedding -->
-            <div class="chatbot-instructions">
-                <h3>How to Embed Your Chatbot:</h3>
-                <p>
-                    Replace the content inside the <code>chatbot-container</code> div with your embedded service chatbot code. 
-                    This could be an iframe, script tag, or other embed code provided by your chatbot service.
-                </p>
+                <!-- The chatbot will be automatically embedded here by Salesforce -->
             </div>
         </section>
 
@@ -227,19 +215,34 @@
         </section>
     </div>
 
+    <!-- Salesforce Embedded Messaging Scripts -->
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DgL00000BjMFl',
+                    'PreChat',
+                    'https://orgfarm-8090f952e7-dev-ed.develop.my.site.com/ESWPreChat1758190527922',
+                    {
+                        scrt2URL: 'https://orgfarm-8090f952e7-dev-ed.develop.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://orgfarm-8090f952e7-dev-ed.develop.my.site.com/ESWPreChat1758190527922/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
     <script>
-        // Optional: Add any JavaScript for enhanced functionality
-        // For example, you might want to add smooth scrolling or chatbot initialization code here
-        
-        // Example: Smooth scrolling to chatbot section
+        // Optional: Smooth scrolling to chatbot section
         function scrollToChatbot() {
             document.getElementById('chatbot-container').scrollIntoView({
                 behavior: 'smooth'
             });
         }
-        
-        // Example: You can add your chatbot initialization code here
-        // initializeChatbot();
     </script>
 </body>
 </html>
