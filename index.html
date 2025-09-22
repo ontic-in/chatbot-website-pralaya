@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood Academy - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .tagline {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .welcome-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .welcome-text {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .chatbot-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .chatbot-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .chatbot-container {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px 0;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-placeholder {
+            color: #6c757d;
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        .chatbot-instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .chatbot-instructions h3 {
+            color: #1976D2;
+            margin-bottom: 10px;
+        }
+
+        .chatbot-instructions p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .contact-details {
+            color: #555;
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .header, .welcome-section, .chatbot-section {
+                padding: 20px;
+            }
+            
+            .chatbot-container {
+                padding: 20px;
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- School Header -->
+        <header class="header">
+            <div class="school-logo">GA</div>
+            <h1>Greenwood Academy</h1>
+            <p class="tagline">Excellence in Education, Innovation in Learning</p>
+        </header>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Welcome to Our School</h2>
+            <p class="welcome-text">
+                At Greenwood Academy, we are committed to providing exceptional education and fostering a nurturing environment where every student can thrive. Our dedicated faculty and innovative programs prepare students for success in an ever-changing world.
+            </p>
+            <p class="welcome-text">
+                Have questions about our programs, admissions, or school life? Our AI assistant is here to help you 24/7. Simply use the chat below to get instant answers to your questions.
+            </p>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-section">
+            <h2>Ask Our AI Assistant</h2>
+            <p>Get instant answers about admissions, programs, schedules, and more!</p>
+            
+            <!-- Chatbot Container - Replace this div with your embedded chatbot code -->
+            <div class="chatbot-container" id="chatbot-container">
+                <div class="chatbot-placeholder">
+                    <h3>🤖 Your Chatbot Will Appear Here</h3>
+                    <p>Replace this placeholder with your embedded chatbot code</p>
+                </div>
+            </div>
+
+            <!-- Instructions for embedding -->
+            <div class="chatbot-instructions">
+                <h3>How to Embed Your Chatbot:</h3>
+                <p>
+                    Replace the content inside the <code>chatbot-container</code> div with your embedded service chatbot code. 
+                    This could be an iframe, script tag, or other embed code provided by your chatbot service.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-details">
+                <p>📍 123 Education Drive, Learning City, LC 12345</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ info@greenwoodacademy.edu</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Optional: Add any JavaScript for enhanced functionality
+        // For example, you might want to add smooth scrolling or chatbot initialization code here
+        
+        // Example: Smooth scrolling to chatbot section
+        function scrollToChatbot() {
+            document.getElementById('chatbot-container').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Example: You can add your chatbot initialization code here
+        // initializeChatbot();
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Chat Form Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pre-Chat Form Test Page</h1>
+        
+        <div class="instructions">
+            <h3>Testing Instructions:</h3>
+            <ol>
+                <li>Replace the embedded service code below with your actual deployment code</li>
+                <li>Open this page in a web browser</li>
+                <li>Click the chat button that appears</li>
+                <li>Verify your custom pre-chat form shows with fields: Service, Name, Email, Phone</li>
+                <li>Fill out the form and submit to test the integration</li>
+            </ol>
+        </div>
+
+        <p>Welcome to our test page! Click the chat button to test the pre-chat form.</p>
+        
+        <p><strong>Expected Custom Pre-Chat Fields:</strong></p>
+        <ul>
+            <li>Service Selection</li>
+            <li>Name</li>
+            <li>Email Address</li>
+            <li>Phone Number</li>
+        </ul>
+    </div>
+
+    <!-- REPLACE THIS WITH YOUR ACTUAL EMBEDDED SERVICE CODE -->
+    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+    <script type='text/javascript'>
+        // PLACEHOLDER - Replace with your actual embedded service configuration
+        console.log('Replace this script with your actual Embedded Service Deployment code from Setup');
+        
+        // Your code should look similar to this structure:
+        /*
+        var initESW = function(gslbBaseURL) {
+            embedded_svc.settings.displayHelpButton = true;
+            embedded_svc.settings.language = '';
+            embedded_svc.settings.defaultMinimizedText = 'Chat with us';
+            
+            embedded_svc.init(
+                'YOUR_COMMUNITY_URL',
+                'YOUR_SITE_URL', 
+                gslbBaseURL,
+                'YOUR_ORG_ID',
+                'YOUR_DEPLOYMENT_NAME',
+                {
+                    baseLiveAgentContentURL: 'YOUR_LIVE_AGENT_URL',
+                    deploymentId: 'YOUR_DEPLOYMENT_ID',
+                    buttonId: 'YOUR_BUTTON_ID',
+                    baseLiveAgentURL: 'YOUR_LIVE_AGENT_BASE_URL',
+                    eswLiveAgentDevName: 'YOUR_DEV_NAME',
+                    isOfflineSupportEnabled: false
+                }
+            );
+        };
+
+        if (!window.embedded_svc) {
+            var s = document.createElement('script');
+            s.setAttribute('src', 'YOUR_COMMUNITY_URL/embeddedservice/5.0/esw.min.js');
+            s.onload = function() {
+                initESW(null);
+            };
+            document.body.appendChild(s);
+        } else {
+            initESW('YOUR_GSLB_BASE_URL');
+        }
+        */
+    </script>
+</body>
+</html>
