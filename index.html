@@ -219,7 +219,15 @@
     <script type='text/javascript'>
         function initEmbeddedMessaging() {
             try {
-                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+                embeddedservice_bootstrap.settings.language = 'en_US';
+                embeddedservice_bootstrap.settings.enabledFeatures = ['LiveAgent'];
+                embeddedservice_bootstrap.settings.entryFeature = 'LiveAgent';
+                
+                // Configure pre-chat settings
+                embeddedservice_bootstrap.settings.prepopulatedPrechatFields = {};
+                embeddedservice_bootstrap.settings.extraPrechatFormDetails = [];
+                embeddedservice_bootstrap.settings.fallbackRouting = [];
+                embeddedservice_bootstrap.settings.offlineSupportMinimizedText = 'Contact Us';
 
                 embeddedservice_bootstrap.init(
                     '00DgL00000BjMFl',
@@ -231,10 +239,13 @@
                 );
             } catch (err) {
                 console.error('Error loading Embedded Messaging: ', err);
+                // Show fallback message in chatbot container
+                document.getElementById('chatbot-container').innerHTML = 
+                    '<p style="color: #dc3545;">Chat service is temporarily unavailable. Please contact us directly.</p>';
             }
         };
     </script>
-    <script type='text/javascript' src='https://orgfarm-8090f952e7-dev-ed.develop.my.site.com/ESWPreChat1758190527922/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <script type='text/javascript' src='https://orgfarm-8090f952e7-dev-ed.develop.my.site.com/ESWPreChat1758190527922/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()' onerror='console.error("Failed to load Salesforce chat script")'></script>
 
     <script>
         // Optional: Smooth scrolling to chatbot section
