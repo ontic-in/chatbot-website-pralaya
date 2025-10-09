@@ -31,7 +31,48 @@ export default class CustomPreChatFormField extends LightningElement {
     @api
     reportValidity() {
         const lightningCmp = this.isTypeChoiceList ? this.template.querySelector("lightning-combobox") : this.template.querySelector("lightning-input");
+
+        // Add custom Gmail validation for email fields
+        if (this.type === "email" && lightningCmp) {
+            if (!this.validateEmailDomain(lightningCmp.value)) {
+                return false;
+            }
+        }
+
         return lightningCmp.reportValidity();
+    }
+
+    /**
+     * Validates that email domain is not Gmail
+     * @param {string} email - Email address to validate
+     * @returns {boolean} - True if valid (not Gmail), false if Gmail
+     */
+    validateEmailDomain(email) {
+        const lightningCmp = this.template.querySelector("lightning-input");
+        if (!lightningCmp || !email) {
+            return true;
+        }
+
+        // Check if email contains @gmail.com
+        const isGmail = email.toLowerCase().includes('@gmail.com');
+
+        if (isGmail) {
+            lightningCmp.setCustomValidity('Gmail addresses are not allowed');
+            lightningCmp.reportValidity();
+            return false;
+        } else {
+            lightningCmp.setCustomValidity('');
+            return true;
+        }
+    }
+
+    /**
+     * Handles blur event on email input for real-time validation
+     */
+    handleEmailBlur(event) {
+        if (this.type === "email") {
+            this.validateEmailDomain(event.target.value);
+        }
     }
 
     get type() {
