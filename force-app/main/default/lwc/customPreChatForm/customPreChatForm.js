@@ -2,7 +2,7 @@ import { track, api, LightningElement } from "lwc";
 
 export default class CustomPreChatForm extends LightningElement {
     /**
-    * Deployment configuration data.
+    * Deployment configuration data....
     * @type {Object}
     */
     @api configuration = {};
